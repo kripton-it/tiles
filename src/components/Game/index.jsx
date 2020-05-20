@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.css';
 
-import { Board } from "./Board";
-import { Info } from "./Info";
+import { Board } from "../Board";
+import { Info } from "../Info";
 
 function Game() {
   return (

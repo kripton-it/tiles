@@ -1,0 +1,24 @@
+.cell {
+  font-size: 30px;
+}
+
+.cell.correct {
+  color: green;
+}
+
+.cell.error {
+  color: red;
+}
+
+.cell.open {
+  color: blue;
+}
+
+.cell.temp {
+  color: black;
+}
+
+.cell.closed {
+  color: transparent;
+  cursor: pointer;
+}

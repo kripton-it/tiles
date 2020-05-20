@@ -1,8 +1,7 @@
 import React from "react";
-import "./styles.css";
 
-import { Cell } from "./Cell";
-import { getStartTable } from "./utils";
+import { Cell } from "../Cell";
+import { getStartTable } from "../../utils";
 
 export const Board = ({ size }) => {
   const startTable = getStartTable(size);
@@ -11,7 +10,7 @@ export const Board = ({ size }) => {
     return (
       <div key={i}>{
         row.map((value, j) => {
-          return <Cell key={j} value={value}/>
+          return <Cell key={j} value={value} state='closed' />
         })
       }</div>
     )
