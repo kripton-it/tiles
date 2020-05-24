@@ -3,6 +3,7 @@ export const TOGGLE_PAUSE = "TOGGLE_PAUSE";
 export const SET_SIZE = "SET_SIZE";
 export const ADD_POINTS = "ADD_POINTS";
 export const FINISH_GAME = "FINISH_GAME";
+export const RESTART_GAME = "RESTART_GAME";
 
 export const startGame = () => ({
   type: START_GAME
@@ -23,4 +24,8 @@ export const addPoints = () => ({
 
 export const finishGame = () => ({
   type: FINISH_GAME
+});
+
+export const restartGame = () => ({
+  type: RESTART_GAME
 });

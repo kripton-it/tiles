@@ -1,4 +1,4 @@
-import { ADD_POINTS, FINISH_GAME, SET_SIZE, START_GAME, TOGGLE_PAUSE } from "./actions";
+import { ADD_POINTS, FINISH_GAME, RESTART_GAME, SET_SIZE, START_GAME, TOGGLE_PAUSE } from "./actions";
 
 export const initialGameState = {
   clicked: 0,
@@ -40,6 +40,9 @@ export default (state = initialGameState, action) => {
         ...state,
         isFinished: true
       };
+
+    case RESTART_GAME:
+      return initialGameState;
 
     default:
       return state;

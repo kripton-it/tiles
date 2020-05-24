@@ -1,17 +1,20 @@
 import React from "react";
 // import "./styles.css";
 
-export const Info = ({ isFinished, points }) => {
+export const Info = ({ isFinished, points, restartGame }) => {
   if (isFinished) {
     return (
-      <div>Congratulations! Game over!</div>
+      <div>
+        <h1>Congratulations! Game over!</h1>
+        <button type="button" onClick={restartGame}>New game</button>
+      </div>
     )
   }
   
   return (
     <div>
-      <h1>Информация о ходе игры</h1>
-      <p>Правильных ответов: {points}</p>
+      <h1>Game info</h1>
+      <p>Correct answers: {points}</p>
     </div>
   );
 }
