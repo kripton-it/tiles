@@ -1,15 +1,22 @@
-import { INC_CLICKED, SET_SIZE, START_GAME, TOGGLE_PAUSE } from "./actions";
+import { ADD_POINTS, FINISH_GAME, SET_SIZE, START_GAME, TOGGLE_PAUSE } from "./actions";
 
 export const initialGameState = {
   clicked: 0,
   isStarted: false,
   isFinished: false,
   isPaused: false,
-  size: 6
+  size: 6,
+  points: 0
 };
 
 export default (state = initialGameState, action) => {
   switch (action.type) {
+    case ADD_POINTS:
+      return {
+        ...state,
+        points: state.points + 1
+      };
+
     case START_GAME:
       return {
         ...state,
@@ -22,16 +29,16 @@ export default (state = initialGameState, action) => {
         isPaused: !state.isPaused
       };
 
-    case INC_CLICKED:
-      return {
-        ...state,
-        clicked: state.clicked + 1
-      };
-
     case SET_SIZE:
       return {
         ...state,
         size: action.payload
+      };
+
+    case FINISH_GAME:
+      return {
+        ...state,
+        isFinished: true
       };
 
     default:

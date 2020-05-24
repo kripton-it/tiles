@@ -1,4 +1,4 @@
-import { togglePause } from "../game/actions";
+import { addPoints, finishGame, togglePause } from "../game/actions";
 
 export const CREATE_BOARD = "CREATE_BOARD";
 export const UPDATE_CELL_STATE = "UPDATE_CELL_STATE";
@@ -35,8 +35,6 @@ export const setTimer = (timerId) => ({
 
 export const handleClick = (position) => (dispatch, getState) => {
   const { current, table, timer } = getState().board;
-  console.log(table);
-  console.log(position);
 
   if (!current) {
     // first cell
@@ -52,6 +50,12 @@ export const handleClick = (position) => (dispatch, getState) => {
     clearTimeout(timer);
     dispatch(updateCellState(current.position, "correct"));
     dispatch(updateCellState(position, "correct"));
+    dispatch(addPoints());
+    const { points, size } = getState().game;
+    console.log(points, size);
+    if (points === size * size / 2) {
+      dispatch(finishGame());
+    }
     dispatch(resetCurrent());
     dispatch(setTimer(null));
   } else {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-const Cell = ({ isPaused, position, table, handleClick }) => {
+export const Cell = ({ isPaused, position, table, handleClick }) => {
   const { state, value } = table[position.i][position.j];
 
   const onClick = () => {
@@ -19,5 +19,3 @@ const Cell = ({ isPaused, position, table, handleClick }) => {
     </button>
   );
 }
-
-export default Cell;

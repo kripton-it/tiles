@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 
 import Board from "../Board";
-import { Info } from "../Info";
+import Info from "../Info";
 import Settings from "../Settings";
 
 const Game = () => {
