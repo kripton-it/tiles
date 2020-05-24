@@ -16,7 +16,10 @@ export const getStartTable = (size) => {
 
     for (let j = 0; j < size; j++) {
       // Fill row with values from shuffled array
-      table[i][j] = Math.ceil(array[i * size + j] / 2);
+      table[i][j] = {
+        state: 'closed',
+        value: Math.ceil(array[i * size + j] / 2)
+      };
     }
   }
 

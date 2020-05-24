@@ -2,15 +2,16 @@ import { connect } from 'react-redux'
 
 import { Settings } from './Settings'
 
-import { startGame } from '../../store/game/actions'
-import { setSize } from '../../store/size/actions'
+import { createBoard } from '../../store/board/actions'
+import { setSize, startGame } from '../../store/game/actions'
 
 const mapStateToProps = (state) => ({
   isStarted: state.game.isStarted,
-  size: state.size.size
+  size: state.game.size
 })
 
 const mapDispatchToProps = (dispatch) => ({
+  createBoard: (size) => dispatch(createBoard(size)),
   setSize: (size) => dispatch(setSize(size)),
   startGame: () => dispatch(startGame())
 })

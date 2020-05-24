@@ -1,15 +1,18 @@
 import React from "react";
 
-export const Settings = ({ isStarted, size, setSize, startGame }) => {
+export const Settings = ({ createBoard, isStarted, setSize, size, startGame }) => {
   if (isStarted) return null;
 
   const selectLevel = (evt) => {
-    console.log(evt.target.value);
+    // console.log(evt.target.value);
+    // const size = +evt.target.value
     setSize(+evt.target.value);
+    // createBoard(size);
   }
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
+    createBoard(size);
     startGame();
   }
 
@@ -32,7 +35,7 @@ export const Settings = ({ isStarted, size, setSize, startGame }) => {
     <form onSubmit={handleSubmit}>
       <p>Please, select level:</p>
       {levels.map(item => (
-        <div className="radio">
+        <div className="radio" key={item.size}>
           <label>
             <input type="radio" value={item.size} checked={size === item.size} onChange={selectLevel} />
             {item.level}
