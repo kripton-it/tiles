@@ -4,10 +4,7 @@ export const Settings = ({ createBoard, isStarted, setSize, size, startGame }) =
   if (isStarted) return null;
 
   const selectLevel = (evt) => {
-    // console.log(evt.target.value);
-    // const size = +evt.target.value
     setSize(+evt.target.value);
-    // createBoard(size);
   }
 
   const handleSubmit = (evt) => {
@@ -18,18 +15,18 @@ export const Settings = ({ createBoard, isStarted, setSize, size, startGame }) =
 
   const levels = [
     {
-      level: 'Easy',
+      level: "Easy",
       size: 4
     },
     {
-      level: 'Middle',
+      level: "Middle",
       size: 6
     },
     {
-      level: 'Difficult',
+      level: "Difficult",
       size: 8
     }
-  ]
+  ];
 
   return (
     <form onSubmit={handleSubmit}>

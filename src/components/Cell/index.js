@@ -1,25 +1,19 @@
-import { connect } from 'react-redux'
+import { connect } from "react-redux";
 
-import Cell from './Cell'
+import Cell from "./Cell";
 
-import { incClicked, togglePause } from '../../store/game/actions'
-import { setTimer, resetCurrent, setCurrent, updateCellState } from '../../store/board/actions'
+import { incClicked } from "../../store/game/actions";
+import { handleClick } from "../../store/board/actions";
 
 const mapStateToProps = (state) => ({
-  current: state.board.current,
   clicked: state.board.table.length,
   isPaused: state.game.isPaused,
-  table: state.board.table,
-  timer: state.board.timer
-})
+  table: state.board.table
+});
 
 const mapDispatchToProps = (dispatch) => ({
   incClicked: () => dispatch(incClicked()),
-  resetCurrent: () => dispatch(resetCurrent()),
-  setCurrent: (position, value) => dispatch(setCurrent(position, value)),
-  setTimer: (timerId) => dispatch(setTimer(timerId)),
-  togglePause: () => dispatch(togglePause()),
-  updateCellState: (position, state) => dispatch(updateCellState(position, state))
-})
+  handleClick: (position) => dispatch(handleClick(position))
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cell)
+export default connect(mapStateToProps, mapDispatchToProps)(Cell);

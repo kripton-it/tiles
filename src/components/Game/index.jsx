@@ -1,11 +1,11 @@
-import React from 'react';
-import './styles.css';
+import React from "react";
+import "./styles.css";
 
 import Board from "../Board";
 import { Info } from "../Info";
 import Settings from "../Settings";
 
-function Game() {
+const Game = () => {
   return (
     <div className="game">
       <div className="game-settings">

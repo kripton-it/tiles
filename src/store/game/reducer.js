@@ -1,4 +1,4 @@
-import { INC_CLICKED, SET_SIZE, START_GAME, TOGGLE_PAUSE } from './actions'
+import { INC_CLICKED, SET_SIZE, START_GAME, TOGGLE_PAUSE } from "./actions";
 
 export const initialGameState = {
   clicked: 0,
@@ -6,7 +6,7 @@ export const initialGameState = {
   isFinished: false,
   isPaused: false,
   size: 6
-}
+};
 
 export default (state = initialGameState, action) => {
   switch (action.type) {
@@ -14,26 +14,27 @@ export default (state = initialGameState, action) => {
       return {
         ...state,
         isStarted: true
-      }
+      };
+
     case TOGGLE_PAUSE:
       return {
         ...state,
         isPaused: !state.isPaused
-      }
+      };
 
     case INC_CLICKED:
       return {
         ...state,
         clicked: state.clicked + 1
-      }
-    
+      };
+
     case SET_SIZE:
       return {
         ...state,
         size: action.payload
-      }
+      };
 
     default:
       return state;
   }
-}
+};

@@ -12,10 +12,6 @@
   color: red;
 }
 
-.cell.open {
-  color: blue;
-}
-
 .cell.temp {
   color: black;
 }
