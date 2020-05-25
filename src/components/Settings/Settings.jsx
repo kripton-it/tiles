@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./styles.css";
+
 export const Settings = ({ createBoard, isStarted, setSize, size, startGame }) => {
   if (isStarted) return null;
 
@@ -29,17 +31,21 @@ export const Settings = ({ createBoard, isStarted, setSize, size, startGame }) =
   ];
 
   return (
-    <form onSubmit={handleSubmit}>
-      <p>Please, select level:</p>
-      {levels.map(item => (
-        <div className="radio" key={item.size}>
-          <label>
-            <input type="radio" value={item.size} checked={size === item.size} onChange={selectLevel} />
-            {item.level}
-          </label>
-        </div>
-      ))}
-      <button type="submit">Start game</button>
+    <form onSubmit={handleSubmit} className="settings">
+      <p className="invite">Please, select level:</p>
+      <div className="radios">
+        {levels.map(item => (
+          <div className="radio" key={item.size}>
+            <label>
+              <input type="radio" value={item.size} checked={size === item.size} onChange={selectLevel} />
+              {item.level}
+            </label>
+          </div>
+        ))}
+      </div>
+      <div className="start">
+        <button type="submit" >Start game</button>
+      </div>
     </form>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-export const Cell = ({ isPaused, position, table, handleClick }) => {
+export const Cell = ({ isPaused, position, size, table, handleClick }) => {
   const { state, value } = table[position.i][position.j];
 
   const onClick = () => {
@@ -11,7 +11,7 @@ export const Cell = ({ isPaused, position, table, handleClick }) => {
   return (
     <button 
       type="button"
-      className={`cell ${state}`}
+      className={`cell-${state} cell-${size}`}
       onClick={onClick}
       disabled={isPaused || state !== "closed"}
     >

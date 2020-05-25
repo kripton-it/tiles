@@ -19,7 +19,7 @@ export const Board = ({ isStarted, table }) => {
   });
 
   return (
-    <div>
+    <div className="game-board">
       {board}
     </div>
   );

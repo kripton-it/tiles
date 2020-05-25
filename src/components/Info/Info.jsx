@@ -1,19 +1,21 @@
 import React from "react";
-// import "./styles.css";
+import "./styles.css";
 
-export const Info = ({ isFinished, points, restartGame }) => {
+export const Info = ({ isFinished, isStarted, points, restartGame }) => {
+  if (!isStarted) return null;
   if (isFinished) {
     return (
-      <div>
-        <h1>Congratulations! Game over!</h1>
-        <button type="button" onClick={restartGame}>New game</button>
+      <div className="report">
+        <h1>
+          Congratulations! Game over!
+          <button type="button" onClick={restartGame} className="restart">New game</button>
+        </h1>
       </div>
     )
   }
   
   return (
-    <div>
-      <h1>Game info</h1>
+    <div className="info">
       <p>Correct answers: {points}</p>
     </div>
   );

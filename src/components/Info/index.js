@@ -6,6 +6,7 @@ import { restartGame } from "../../store/game/actions";
 
 const mapStateToProps = (state) => ({
   isFinished: state.game.isFinished,
+  isStarted: state.game.isStarted,
   points: state.game.points
 });
 

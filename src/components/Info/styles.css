@@ -1,0 +1,15 @@
+.restart {
+  margin-left: 2rem;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.info {
+  font-size: 2rem;
+}
+
+.report h1 {
+  font-size: 2rem;
+  color: green;
+}

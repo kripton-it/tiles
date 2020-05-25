@@ -1,0 +1,36 @@
+.settings {
+  width: 100%;
+}
+
+.invite {
+  margin-top: 0;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.radios {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7rem;
+}
+
+.radio {
+  font-size: 2rem;
+}
+
+.radio label {
+  cursor: pointer;
+}
+
+.start {
+  text-align: center;
+}
+
+.start button {
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 1rem;
+}

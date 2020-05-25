@@ -1,7 +1,6 @@
 import { ADD_POINTS, FINISH_GAME, RESTART_GAME, SET_SIZE, START_GAME, TOGGLE_PAUSE } from "./actions";
 
 export const initialGameState = {
-  clicked: 0,
   isStarted: false,
   isFinished: false,
   isPaused: false,

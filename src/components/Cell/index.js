@@ -6,6 +6,7 @@ import { handleClick } from "../../store/board/actions";
 
 const mapStateToProps = (state) => ({
   isPaused: state.game.isPaused,
+  size: state.game.size,
   table: state.board.table
 });
 
