@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tiles/static/css/main.dad1651d.chunk.css",
+    "main.js": "/tiles/static/js/main.a92f4a0e.chunk.js",
+    "main.js.map": "/tiles/static/js/main.a92f4a0e.chunk.js.map",
+    "runtime-main.js": "/tiles/static/js/runtime-main.83a3b221.js",
+    "runtime-main.js.map": "/tiles/static/js/runtime-main.83a3b221.js.map",
+    "static/js/2.3905c7b0.chunk.js": "/tiles/static/js/2.3905c7b0.chunk.js",
+    "static/js/2.3905c7b0.chunk.js.map": "/tiles/static/js/2.3905c7b0.chunk.js.map",
+    "index.html": "/tiles/index.html",
+    "precache-manifest.6ba505896571f961ab2f4b4bf7ffa605.js": "/tiles/precache-manifest.6ba505896571f961ab2f4b4bf7ffa605.js",
+    "service-worker.js": "/tiles/service-worker.js",
+    "static/css/main.dad1651d.chunk.css.map": "/tiles/static/css/main.dad1651d.chunk.css.map",
+    "static/js/2.3905c7b0.chunk.js.LICENSE.txt": "/tiles/static/js/2.3905c7b0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83a3b221.js",
+    "static/js/2.3905c7b0.chunk.js",
+    "static/css/main.dad1651d.chunk.css",
+    "static/js/main.a92f4a0e.chunk.js"
+  ]
+}
